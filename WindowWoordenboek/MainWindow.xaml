@@ -1,0 +1,26 @@
+﻿<Window x:Class="WindowWoordenboek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowWoordenboek"
+        mc:Ignorable="d"
+        Title="WindowWoordenBoek" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Loaded="Grid_Loaded">
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Bestand">
+                <MenuItem Header="Zoeken" Click="MenuItem_Click_1"></MenuItem>
+                <MenuItem Header="Sluiten" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Info" Click="MenuItem_Click_2"></MenuItem>
+        </Menu>
+        <ListBox x:Name="WoordenListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="15,51,557,67"/>
+        <Label Content="Engels term" HorizontalAlignment="Left" Margin="291,50,0,0" VerticalAlignment="Top" Width="122"/>
+        <Button x:Name="ToevogegenButton" Content="Toevoegen" HorizontalAlignment="Left" Margin="335,165,0,0" VerticalAlignment="Top" Height="39" Width="145" Click="ToevogegenButton_Click"/>
+        <TextBox x:Name="EngelsTermWoordTextBox" HorizontalAlignment="Left" Margin="475,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="25"/>
+        <Label Content="Nederlands term" HorizontalAlignment="Left" Margin="290,90,0,0" VerticalAlignment="Top" Width="118"/>
+        <TextBox x:Name="NederlandsTermWoordTextBox" HorizontalAlignment="Left" Margin="476,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="25"/>
+        <Button x:Name="verwijderenButton" Content="verwijderen" HorizontalAlignment="Left" Margin="334,218,0,0" VerticalAlignment="Top" Height="39" Width="145" Click="verwijderenButton_Click"/>
+
+    </Grid>
+</Window>
